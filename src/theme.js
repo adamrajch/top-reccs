@@ -8,6 +8,7 @@ const theme = createTheme({
           WebkitBoxShadow: "0 0 0 100px #1b2330 inset",
           WebkitTextFillColor: "#fff",
         },
+        borderColor: " rgba(2, 106, 167, 1)",
       },
     },
   },

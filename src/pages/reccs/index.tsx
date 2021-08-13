@@ -1,6 +1,7 @@
-import { Button, Typography } from "@material-ui/core";
+import { Button, Grid, Typography } from "@material-ui/core";
 import React, { ReactElement, useEffect, useState } from "react";
-import { supabase } from "../../client";
+import { supabase } from "../../../client";
+import { MediaCard } from "../../components/mediaCard";
 
 export default function MyReccs(): ReactElement {
   const [lists, setLists] = useState([]);
@@ -23,6 +24,13 @@ export default function MyReccs(): ReactElement {
       <Button variant="contained" color="primary">
         Primary
       </Button>
+      <Grid container justifyContent="center" spacing={spacing}>
+        {lists.map((m) => (
+          <Grid key={m.mal_id} item>
+            <MediaCard title={m.title} img={m.image_url} />
+          </Grid>
+        ))}
+      </Grid>
     </div>
   );
 }

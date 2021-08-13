@@ -119,7 +119,7 @@ export default function Header() {
                 open={open}
                 onClose={handleClose}
               >
-                <MenuItem onClick={() => router.push(`/my-reccs`)}>
+                <MenuItem onClick={() => router.push(`/reccs`)}>
                   My Reccs
                 </MenuItem>
                 <MenuItem onClick={() => router.push(`/profile`)}>
